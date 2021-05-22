@@ -31,8 +31,8 @@ class LoginActivity : AppCompatActivity() {
 
         binding?.btnLogin?.setOnClickListener {
 
-            emailUsed = binding?.email?.editText?.text.toString()
-            passwordUsed = binding?.password?.editText?.text.toString()
+            emailUsed = binding?.email?.text.toString()
+            passwordUsed = binding?.password?.text.toString()
 
                 val user = runBlocking {
                     userRepo.getUser(emailUsed!!, passwordUsed!!)

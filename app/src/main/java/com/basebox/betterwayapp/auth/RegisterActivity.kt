@@ -26,8 +26,8 @@ class RegisterActivity : AppCompatActivity() {
 
         binding?.btnRegister?.setOnClickListener {
 
-            email = binding?.email?.editText?.text.toString()
-            password = binding?.password?.editText?.text.toString()
+            email = binding?.email?.text.toString()
+            password = binding?.password?.text.toString()
 
             if(email.isNullOrBlank() && password.isNullOrBlank()){
                 Toast.makeText(this, "Email and Password Required!", Toast.LENGTH_LONG).show()
